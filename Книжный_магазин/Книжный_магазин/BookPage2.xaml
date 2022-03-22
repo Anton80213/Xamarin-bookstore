@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Книжный_магазин.BookPage2" Title="Информация о книге">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Жанр" TextColor="DarkRed" />
+            <Entry Text="{Binding Жанр}" />
+            <Label Text="Автор" TextColor="DarkRed" />
+            <Entry Text="{Binding Автор}" />
+            <Label Text="Название" TextColor="DarkRed" />
+            <Entry Text="{Binding Название_книги}" />
+            <Label Text="Цена" TextColor="DarkRed" />
+            <Entry Text="{Binding Цена}" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="button1" Text="Сохранить" BackgroundColor="Aquamarine" TextColor="Black" FontSize="8" BorderWidth="0" Clicked="SaveBook" WidthRequest="80" HeightRequest="40"/>
+                <Button x:Name="button2" Text="Удалить" BackgroundColor="Red" TextColor="Black" FontSize="8" BorderWidth="0" Clicked="DeleteBook" WidthRequest="80" HeightRequest="40"/>
+                <Button x:Name="button3" Text="Заказать" BackgroundColor="Blue" TextColor="Black" FontSize="8" BorderWidth="0" Clicked="OrderBook" WidthRequest="80" HeightRequest="40"/>
+                <Button x:Name="button4" Text="Отмена" BackgroundColor="Gold" TextColor="Black" FontSize="8" BorderWidth="0" Clicked="Cancel" WidthRequest="80" HeightRequest="40"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
