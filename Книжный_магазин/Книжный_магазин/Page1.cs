@@ -89,6 +89,33 @@ namespace Книжный_магазин
         void picker_SelectedIndexChanged(object sender, EventArgs e)
         {
             header.Text = "Вы выбрали: " + picker.Items[picker.SelectedIndex];
+            var a = picker2.SelectedItem;
+            if (picker.SelectedItem.ToString() == "Ручки")
+            {
+                if (a != null) text = (int.Parse(a.ToString()) * 7).ToString() + " рублей";
+            }
+            else if (picker.SelectedItem.ToString() == "Карандаши")
+            {
+                if (a != null) text = (int.Parse(a.ToString()) * 5).ToString() + " рублей";
+            }
+            else if (picker.SelectedItem.ToString() == "Ластики")
+            {
+                if (a != null) text = (int.Parse(a.ToString()) * 6).ToString() + " рублей";
+            }
+            else if (picker.SelectedItem.ToString() == "Альбомы")
+            {
+                if (a != null) text = (int.Parse(a.ToString()) * 50).ToString() + " рублей";
+            }
+            else if (picker.SelectedItem.ToString() == "Краски")
+            {
+                if (a != null) text = (int.Parse(a.ToString()) * 70).ToString() + " рублей";
+            }
+            label = new Label()
+            {
+                Text = text,
+                TextColor = Color.Black
+            };
+
         }
         void picker2_SelectedIndexChanged(object sender, EventArgs e)
         {
